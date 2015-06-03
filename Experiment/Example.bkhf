@@ -1,5 +1,5 @@
-st = Experiment/x0.xyz
-en = Experiment/xN.xyz
+st = MODOI/Experiment/x0.xyz
+en = MODOI/Experiment/xN.xyz
 ln = 25
 gn = 15
 pa = 200
