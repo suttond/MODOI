@@ -1,6 +1,5 @@
 import multiprocessing
 import logging
-import os
 
 from SimulationServer.SimulationServer import SimulationServer
 from SimulationClient.SimulationClient import SimulationClient
@@ -48,16 +47,8 @@ if __name__ == '__main__':
     # Location and name of the output file without a suffix (will be added in runtime)
     OUTPUT = 'MODOI/Experiment/Trajectory'
 
-    # Location of the log file for the server - created if it doesn't exist
-    SERVER_LOG = 'MODOI/Experiment/Log/Server.log'
-
-    # Location of the log files for the SimulationPotential and SimulationClient instances without a suffix.
-    POTENTIAL_SERVER_LOG_PREFIX = 'MODOI/Experiment/Log/Potential'
-    CLIENT_LOG_PREFIX = 'MODOI/Experiment/Log/Client'
-
     # Create a local process running a SimulationServer instance
-    open(SERVER_LOG).close()
-    s = multiprocessing.Process(target=startMdServer, args=(CONFIG_FILE, OUTPUT, SERVER_LOG, IP_ADDRESS, BASE_PORT,
+    s = multiprocessing.Process(target=startMdServer, args=(CONFIG_FILE, OUTPUT, None, IP_ADDRESS, BASE_PORT,
                                                             AUTHKEY, logging.INFO))
     s.start()
 
@@ -69,16 +60,12 @@ if __name__ == '__main__':
             # Compute a new port number (to avoid local conflicts)
             BASE_PORT += 1
             metric_server_addresses.append(('localhost', BASE_PORT))
-            open(POTENTIAL_SERVER_LOG_PREFIX + str(i) + '_' + str(j) + '.log').close()
-            m = multiprocessing.Process(target=startMetServer, args=(CONFIG_FILE, POTENTIAL_SERVER_LOG_PREFIX + str(i)
-                                                                     + '_' + str(j) + '.log',
+            m = multiprocessing.Process(target=startMetServer, args=(CONFIG_FILE, None,
                                                                      logging.INFO, IP_ADDRESS, BASE_PORT, AUTHKEY, ))
             m.start()
 
         # Start a SimulationClient process in a separate thread.
         UNIQUE_CLIENT_ID = 'Client_' + str(i)
-        open(CLIENT_LOG_PREFIX + '_' + str(i) + '.log').close()
         c = multiprocessing.Process(target=startMdClient, args=(UNIQUE_CLIENT_ID, IP_ADDRESS, SERVER_PORT, AUTHKEY,
-                                                                metric_server_addresses, CONFIG_FILE, CLIENT_LOG_PREFIX
-                                                                + '_' + str(i) + '.log'))
+                                                                metric_server_addresses, CONFIG_FILE, None))
         c.start()
