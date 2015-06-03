@@ -1,5 +1,6 @@
 import multiprocessing
 import logging
+import os
 
 from SimulationServer.SimulationServer import SimulationServer
 from SimulationClient.SimulationClient import SimulationClient
@@ -36,7 +37,7 @@ if __name__ == '__main__':
     # Configure distributed system for head machine
     NUMBER_OF_METRIC_SERVERS_PER_CLIENT = 2
     NUMBER_OF_CLIENTS = 2
-    IP_ADDRESS = '127.0.0.1'
+    IP_ADDRESS = 'localhost'
     SERVER_PORT = 5000
     BASE_PORT = 5000  # Typically same value as server port
     AUTHKEY = 'password'
@@ -55,6 +56,7 @@ if __name__ == '__main__':
     CLIENT_LOG_PREFIX = 'Experiment/Log/Client'
 
     # Create a local process running a SimulationServer instance
+    open(SERVER_LOG).close()
     s = multiprocessing.Process(target=startMdServer, args=(CONFIG_FILE, OUTPUT, SERVER_LOG, IP_ADDRESS, BASE_PORT,
                                                             AUTHKEY, logging.DEBUG))
     s.start()
@@ -67,6 +69,7 @@ if __name__ == '__main__':
             # Compute a new port number (to avoid local conflicts)
             BASE_PORT += 1
             metric_server_addresses.append(('localhost', BASE_PORT))
+            open(POTENTIAL_SERVER_LOG_PREFIX + str(i) + '_' + str(j) + '.log').close()
             m = multiprocessing.Process(target=startMetServer, args=(CONFIG_FILE, POTENTIAL_SERVER_LOG_PREFIX + str(i)
                                                                      + '_' + str(j) + '.log',
                                                                      logging.INFO, IP_ADDRESS, BASE_PORT, AUTHKEY, ))
@@ -74,6 +77,7 @@ if __name__ == '__main__':
 
         # Start a SimulationClient process in a separate thread.
         UNIQUE_CLIENT_ID = 'Client_' + str(i)
+        open(CLIENT_LOG_PREFIX + '_' + str(i) + '.log').close()
         c = multiprocessing.Process(target=startMdClient, args=(UNIQUE_CLIENT_ID, IP_ADDRESS, SERVER_PORT, AUTHKEY,
                                                                 metric_server_addresses, CONFIG_FILE, CLIENT_LOG_PREFIX
                                                                 + '_' + str(i) + '.log'))
