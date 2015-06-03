@@ -1,6 +1,6 @@
 st = MODOI/Experiment/x0.xyz
 en = MODOI/Experiment/xN.xyz
-ln = 25
-gn = 15
+ln = 11
+gn = 10
 pa = 200
-to = 0.025
+to = 0.1

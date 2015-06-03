@@ -12,7 +12,7 @@
 
 # set the number of nodes
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=16
+#SBATCH --ntasks-per-node=7
 
 # set max wallclock time
 #SBATCH --time=04:00:00
