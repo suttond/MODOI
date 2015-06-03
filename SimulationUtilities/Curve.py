@@ -120,31 +120,34 @@ class Curve:
         """
 
         # This will get quicker with NumPy 2.0.0 - https://github.com/numpy/numpy/issues/2269
+        try:
+            # Determine the node number of the next movable node in the next_movable_node array. This particular test
+            # attempts to find a node that has not been previously moved.
+            next_movable_node = np.where(np.multiply(self.node_movable, self.nodes_moved) > 1)[0][0]
 
-        # Determine the node number of the next movable node in the next_movable_node array. This particular test
-        # attempts to find a node that has not been previously moved.
-        next_movable_node = np.where(np.multiply(self.node_movable, self.nodes_moved) > 1)[0][0]
+            # If there is no node available that hasn't been previously moved then...
+            if next_movable_node is None:
 
-        # If there is no node available that hasn't been previously moved then...
-        if next_movable_node is None:
+                # Simply find a node that is movable. This time we include previously moved nodes in our search
+                next_movable_node = np.where(self.node_movable > 1)[0][0]
 
-            # Simply find a node that is movable. This time we include previously moved nodes in our search
-            next_movable_node = np.where(self.node_movable > 1)[0][0]
+            # If we still couldn't find a node...
+            if next_movable_node is None:
 
-        # If we still couldn't find a node...
-        if next_movable_node is None:
+                # Return None
+                return None
 
-            # Return None
+            # Otherwise...
+            else:
+
+                # Mark the node as no longer movable to prevent it being re-issued.
+                self.node_movable[next_movable_node] = 0
+
+                # Return the node number
+                return next_movable_node
+
+        except IndexError:
             return None
-
-        # Otherwise...
-        else:
-
-            # Mark the node as no longer movable to prevent it being re-issued.
-            self.node_movable[next_movable_node] = 0
-
-            # Return the node number
-            return next_movable_node
 
     def get_points(self):
         """ Accessor method for the points attribute.
