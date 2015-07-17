@@ -14,16 +14,28 @@ def find_geodesic_midpoint(start_point, end_point, number_of_inner_points, basis
     of times the metric function is called.
 
     Args:
-      start_point (numpy.array): The first end point of the curve.
-      end_point (numpy.array): The last end point of the curve.
-      number_of_inner_points (int): The number of nodes along the curve, less the end points.
-      basis_rotation_matrix (numpy.array): The matrix computed as a result of the orthogonal_tangent_basis function.
-      tangent_direction (numpy.array): The tangent direction as computed by the SimulationClient.
-      codimension (int): The dimension of the problem minus 1. Computed from the atomistic simulation environment.
-      metric_server_addresses: A list of tuples of the form (str, int) containing the hostnames and port numbers of the SimulationPotential instances.
-      mass_matrix (numpy.array): A diagonal NumPy array containing the masses of the molecular system as computed in the SimulationClient object.
-      authkey (str): The password used in order to communicate with the SimulationPotential instances.
-      gtol (optional float): The tolerance threshold for the BGFS method.
+      start_point (numpy.array) :
+          The first end point of the curve.
+      end_point (numpy.array) :
+          The last end point of the curve.
+      number_of_inner_points (int) :
+          The number of nodes along the curve, less the end points.
+      basis_rotation_matrix (numpy.array) :
+          The matrix computed as a result of the orthogonal_tangent_basis function.
+      tangent_direction (numpy.array) :
+          The tangent direction as computed by the SimulationClient.
+      codimension (int) :
+          The dimension of the problem minus 1. Computed from the atomistic simulation environment.
+      metric_server_addresses :
+          A list of tuples of the form (str, int) containing the hostnames and port numbers of the SimulationPotential
+          instances.
+      mass_matrix (numpy.array) :
+          A diagonal NumPy array containing the masses of the molecular system as computed in the SimulationClient
+          object.
+      authkey (str) :
+          The password used in order to communicate with the SimulationPotential instances.
+      gtol (optional float) :
+          The tolerance threshold for the BGFS method.
 
     Returns:
       numpy.array: The midpoint along the local geodesic curve.
