@@ -10,13 +10,7 @@ MODOI is an implementation of the Birkhoff curve shortening procedure using a te
 How do I get set up?
 ----------------------------
 
-* Install Anaconda (http://continuum.io/downloads)
-* Install ASE using **pip install python-ase**
-* Install pyCharm (https://www.jetbrains.com/pycharm/)
-* Open pyCharm and select **Check out from Version Control**, then select **Git**
-* Use Git Repository URL: https://<enter-bitbucker-username>@bitbucket.org/molecularsimulationbath/modoi.git
-* Enter your BitBucket password and a copy of the project will be made locally
-* The project should always be left in a state where a short simulation can be run. At the time of writing this is an all atom EMT simulation of Butane between the trans and gauche conformations. On downloaded test the software by running the **Local_Simulation.py** script.
+* Use Git Repository URL: https://github.com/suttond/modoi.git
 
 Who do I talk to?
 -----------------------
