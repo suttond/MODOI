@@ -83,17 +83,26 @@ def shifts_to_curve(start_point, end_point, shift_points, number_of_inner_points
 
     """
 
-    # Initialise the curve list with the start point.
-    curve = [start_point]
+    # Compute tangent direction of line joining start and end points
+    tangent = np.subtract(end_point, start_point)/(number_of_inner_points+1)
 
-    # For each interior point solve shift_points[i] = x_N - <x_N, tangent_direction>tangent_direction for x_N.
-    for i in xrange(1, number_of_inner_points + 1):
-        curve.append(np.add(np.add(curve[i - 1], tangent_direction),
-                            basis_rotation_matrix.dot(np.insert(shift_points[(i - 1) *
-                                                                             codimension:i * codimension], 0, 0.0))))
+    # Initialise list to store points
+    points = []
 
-    # Finish describing the curve by adding the end point.
-    curve.append(end_point)
+    # Generate points that are uniformly distributed along the initial line
+    for i in xrange(number_of_inner_points+2):
+        points.append(np.add(start_point, float(i)*tangent))
 
-    # Return the curve list.
-    return curve
+    # Shift the points as encoded in x
+    for i in xrange(0, len(shift_points)/codimension):
+
+        # Embed vector i into co_dimension + 1 dimensional space
+        unrotated_shift = np.hstack((np.zeros(1), shift_points[i*codimension:(i+1)*codimension]))
+
+        # Convert vector, by rotation, from shift from e_1 basis direction to shift from tangent direction
+        shift = basis_rotation_matrix.dot(unrotated_shift)
+
+        # Append point to list
+        points[i+1] = np.add(points[i+1], shift)
+
+    return points
