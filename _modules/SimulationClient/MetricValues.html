@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SimulationClient.MetricValues &mdash; MOlecular Dynamics Over Ip - University of Bath</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MOlecular Dynamics Over Ip - University of Bath" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> MODOI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Algorithm.html">The Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#butane-simulation">Butane Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#configuring-modoi-for-butane">Configuring MODOI for Butane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#running-the-simulation">Running the Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Implementations.html">Implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Local_Simulation.html">Local_Simulation Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationClient.html">SimulationClient Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.SimulationClient">SimulationClient.SimulationClient Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.CustomBFGS">SimulationClient.CustomBFGS Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.Geometric">SimulationClient.Geometric Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.LinearAlgebra">SimulationClient.LinearAlgebra Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.MetricValues">SimulationClient.MetricValues Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationPotential.html">SimulationPotential Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationServer.html">SimulationServer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationUtilities.html">SimulationUtilities Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Communication_Codes">SimulationUtilities.Communication_Codes Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Configuration_Processing">SimulationUtilities.Configuration_Processing Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Curve">SimulationUtilities.Curve Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Extract_States_PDB">SimulationUtilities.Extract_States_PDB Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Visualize">SimulationUtilities.Visualize Module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">MODOI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>SimulationClient.MetricValues</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for SimulationClient.MetricValues</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">multiprocessing.connection</span> <span class="kn">import</span> <span class="n">Client</span>
+
+<span class="kn">from</span> <span class="nn">SimulationUtilities.Communication_Codes</span> <span class="kn">import</span> <span class="n">comm_code</span>
+
+
+<div class="viewcode-block" id="get_metric"><a class="viewcode-back" href="../../SimulationClient.html#SimulationClient.MetricValues.get_metric">[docs]</a><span class="k">def</span> <span class="nf">get_metric</span><span class="p">(</span><span class="n">curve</span><span class="p">,</span> <span class="n">number_of_inner_points</span><span class="p">,</span> <span class="n">metric_server_addresses</span><span class="p">,</span> <span class="n">authkey</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; This function distributes the task of computing the metric values along the curve using the SimulationPotential instances.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      curve (numpy.array): A list of NumPy arrays representing a local geodesic.</span>
+<span class="sd">      number_of_inner_points (int): The number of points along the curve, less two.</span>
+<span class="sd">      metric_server_addresses: A list of tuples of the form (str, int) containing the hostnames and port numbers of the SimulationPotential instances.</span>
+<span class="sd">      authkey (str): The password used in order to communicate with the SimulationPotential instances.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      list: A list of float values called metric where metric[i] = a(curve[i]).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c"># Initialise the memory for the metric values</span>
+    <span class="n">metric</span> <span class="o">=</span> <span class="p">[[]]</span> <span class="o">*</span> <span class="p">(</span><span class="n">number_of_inner_points</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="c"># Compute how many SimulationPotential instances are available to the SimulationClient</span>
+    <span class="n">number_of_metric_servers</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">)</span>
+
+    <span class="c"># Estimate how many tasks per SimulationPotential is a uniform distribution</span>
+    <span class="n">tasks_per_server</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">number_of_inner_points</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">number_of_metric_servers</span><span class="p">))</span>
+
+    <span class="c"># Compute how many tasks are left over if I give each SimulationPotential tasks_per_server points to evaluate.</span>
+    <span class="n">remainder_tasks</span> <span class="o">=</span> <span class="n">number_of_inner_points</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">tasks_per_server</span> <span class="o">*</span> <span class="n">number_of_metric_servers</span>
+
+    <span class="c"># Create a flag to indicate which point along the curve is currently being issued</span>
+    <span class="n">current_point</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c"># Indicate whether the current PotentialServer instance needs an extra task to ensure all the nodes are computed</span>
+    <span class="n">extra_jobs</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c"># For each SimulationPotential instance...</span>
+    <span class="k">for</span> <span class="n">address</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">number_of_metric_servers</span><span class="p">):</span>
+
+        <span class="c"># If all of the surplus tasks have been issued then indicate no extra tasks are needed</span>
+        <span class="k">if</span> <span class="n">address</span> <span class="o">&gt;=</span> <span class="n">remainder_tasks</span><span class="p">:</span>
+            <span class="n">extra_jobs</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c"># Initialise a list to contain the points to be computed for the current SimulationPotential instance</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c"># Get the points between and including curve[current_point] to curve[current_point+tasks_per_server+extra_jobs]</span>
+        <span class="c"># and prepare them to send to the current SimulationPotential instance</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">current_point</span><span class="p">,</span> <span class="n">current_point</span> <span class="o">+</span> <span class="n">tasks_per_server</span> <span class="o">+</span> <span class="n">extra_jobs</span><span class="p">):</span>
+            <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">curve</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span><span class="p">])</span>
+
+        <span class="c"># Increase current_point so the same points are not sent again</span>
+        <span class="n">current_point</span> <span class="o">+=</span> <span class="n">tasks_per_server</span> <span class="o">+</span> <span class="n">extra_jobs</span>
+
+        <span class="c"># Attempt to contact the SimulationPotential instance</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c"># Create connection with the SimulationPotential instance</span>
+            <span class="n">metric_server</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">[</span><span class="n">address</span><span class="p">],</span> <span class="n">authkey</span><span class="o">=</span><span class="n">authkey</span><span class="p">)</span>
+
+            <span class="c"># Prepare a response containing the points to evaluate the metric on</span>
+            <span class="n">metric_server</span><span class="o">.</span><span class="n">send</span><span class="p">({</span><span class="s">&#39;status_code&#39;</span><span class="p">:</span> <span class="n">comm_code</span><span class="p">(</span><span class="s">&#39;CLIENT_PROVIDES_POINT&#39;</span><span class="p">),</span>
+                                <span class="s">&#39;points&#39;</span><span class="p">:</span> <span class="n">points</span><span class="p">})</span>
+
+            <span class="c"># Close the connection</span>
+            <span class="n">metric_server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c"># If the SimulationPotential instance couldn&#39;t be contacted then return None to shut down the SimulationClient</span>
+        <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+            <span class="c"># Write a warning to the log explaining which SimulationPotential couldn&#39;t be contacted.</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">&#39;Failed to Make Connection to SimulationPotential at &#39;</span>
+                          <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">[</span><span class="n">address</span><span class="p">])</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span><span class="p">)</span>
+
+            <span class="c"># Return a None value</span>
+            <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="c"># Now the code attempts to collect the computed values.</span>
+
+    <span class="c"># For each SimulationPotential instance...</span>
+    <span class="k">for</span> <span class="n">address</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">number_of_metric_servers</span><span class="p">):</span>
+        <span class="c"># Attempt to contact the SimulationPotential instance</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c"># Create connection with the SimulationPotential instance</span>
+            <span class="n">metric_server</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">[</span><span class="n">address</span><span class="p">],</span> <span class="n">authkey</span><span class="o">=</span><span class="n">authkey</span><span class="p">)</span>
+
+            <span class="c"># Prepare a response indicating the SimulationClient is ready for the answer</span>
+            <span class="n">metric_server</span><span class="o">.</span><span class="n">send</span><span class="p">({</span><span class="s">&#39;status_code&#39;</span><span class="p">:</span> <span class="n">comm_code</span><span class="p">(</span><span class="s">&#39;CLIENT_ASKS_FOR_VALUES&#39;</span><span class="p">)})</span>
+
+            <span class="c"># Receive the metric values at the given points</span>
+            <span class="n">metric_server_response</span> <span class="o">=</span> <span class="n">metric_server</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+
+            <span class="c"># Process the received values into the metric list</span>
+            <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">metric_server_response</span><span class="p">[</span><span class="s">&#39;values&#39;</span><span class="p">]:</span>
+                <span class="n">metric</span><span class="p">[</span><span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="c"># Close the connection</span>
+            <span class="n">metric_server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c"># If the SimulationPotential instance couldn&#39;t be contacted then return None to shut down the SimulationClient</span>
+        <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+            <span class="c"># Write a warning to the log explaining which SimulationPotential couldn&#39;t be contacted.</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">&#39;Failed to Make Connection to SimulationPotential at &#39;</span>
+                          <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">[</span><span class="n">address</span><span class="p">])</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span><span class="p">)</span>
+
+            <span class="c"># Return a None value</span>
+            <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="c"># If None hasn&#39;t been returned then return the metric values</span>
+    <span class="k">return</span> <span class="n">metric</span>
+
+</div>
+<div class="viewcode-block" id="shutdown_metric"><a class="viewcode-back" href="../../SimulationClient.html#SimulationClient.MetricValues.shutdown_metric">[docs]</a><span class="k">def</span> <span class="nf">shutdown_metric</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">,</span> <span class="n">authkey</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; This function tells all of the SimulationPotential instances running on the addresses in metric_server_addresses to shutdown. This is called when a SimulationClient instance shuts down.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      metric_server_addresses: A list of tuples of the form (str, int) containing the hostnames and port numbers of the SimulationPotential instances.</span>
+<span class="sd">      authkey (str): The password used in order to communicate with the SimulationPotential instances.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      float: The length of the curve with metric values in metric.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c"># For each SimulationPotential instance...</span>
+    <span class="k">for</span> <span class="n">address</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">)):</span>
+
+        <span class="c"># Try making contact with the SimulationPotential instance...</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c"># Establish a connection with the SimulationPotential</span>
+            <span class="n">metric_server</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">[</span><span class="n">address</span><span class="p">],</span> <span class="n">authkey</span><span class="o">=</span><span class="n">authkey</span><span class="p">)</span>
+
+            <span class="c"># Send a status code indicating the SimulationPotential instance should stop running.</span>
+            <span class="n">metric_server</span><span class="o">.</span><span class="n">send</span><span class="p">({</span><span class="s">&#39;status_code&#39;</span><span class="p">:</span> <span class="n">comm_code</span><span class="p">(</span><span class="s">&#39;KILL&#39;</span><span class="p">)})</span>
+
+            <span class="c"># Close the connection.</span>
+            <span class="n">metric_server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c"># If contact with the SimulationPotential instance cannot be made then...</span>
+        <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+            <span class="c"># Make a note in the log which SimulationPotential couldn&#39;t be contacted.</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">&#39;Failed to Make Connection to SimulationPotential at &#39;</span>
+                          <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">metric_server_addresses</span><span class="p">[</span><span class="n">address</span><span class="p">])</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span><span class="p">)</span></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Daniel C. Sutton.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

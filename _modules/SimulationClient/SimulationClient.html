@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SimulationClient.SimulationClient &mdash; MOlecular Dynamics Over Ip - University of Bath</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MOlecular Dynamics Over Ip - University of Bath" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> MODOI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Algorithm.html">The Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#butane-simulation">Butane Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#configuring-modoi-for-butane">Configuring MODOI for Butane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#running-the-simulation">Running the Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Implementations.html">Implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Local_Simulation.html">Local_Simulation Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationClient.html">SimulationClient Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.SimulationClient">SimulationClient.SimulationClient Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.CustomBFGS">SimulationClient.CustomBFGS Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.Geometric">SimulationClient.Geometric Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.LinearAlgebra">SimulationClient.LinearAlgebra Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.MetricValues">SimulationClient.MetricValues Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationPotential.html">SimulationPotential Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationServer.html">SimulationServer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationUtilities.html">SimulationUtilities Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Communication_Codes">SimulationUtilities.Communication_Codes Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Configuration_Processing">SimulationUtilities.Configuration_Processing Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Curve">SimulationUtilities.Curve Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Extract_States_PDB">SimulationUtilities.Extract_States_PDB Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Visualize">SimulationUtilities.Visualize Module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">MODOI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>SimulationClient.SimulationClient</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for SimulationClient.SimulationClient</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">multiprocessing.connection</span> <span class="kn">import</span> <span class="n">Client</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">SimulationUtilities</span> <span class="kn">import</span> <span class="n">Configuration_Processing</span>
+<span class="kn">from</span> <span class="nn">SimulationUtilities.Communication_Codes</span> <span class="kn">import</span> <span class="n">comm_code</span>
+<span class="kn">import</span> <span class="nn">LinearAlgebra</span> <span class="kn">as</span> <span class="nn">la</span>
+<span class="kn">from</span> <span class="nn">CustomBFGS</span> <span class="kn">import</span> <span class="n">find_geodesic_midpoint</span>
+<span class="kn">from</span> <span class="nn">MetricValues</span> <span class="kn">import</span> <span class="n">shutdown_metric</span>
+
+
+<div class="viewcode-block" id="SimulationClient"><a class="viewcode-back" href="../../SimulationClient.html#SimulationClient.SimulationClient.SimulationClient">[docs]</a><span class="k">class</span> <span class="nc">SimulationClient</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    The purpose of this object is to compute local geodesics using a modified BFGS method. The object receives a pair of</span>
+<span class="sd">    end points to compute the local geodesic between. The simulation client then returns a new position for the node.</span>
+<span class="sd">    The simulation client needs the value of the potential and it&#39;s gradient function, in order to achieve this it makes</span>
+<span class="sd">    calls to it&#39;s assigned SimulationPotential servers.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">      CONFIGURATION (dict) :</span>
+<span class="sd">          A dictionary containing the parsed values from the file in configuration_file.</span>
+<span class="sd">      CURVE_ADDRESS (str, int) :</span>
+<span class="sd">          A tuple containing a string representing the hostname/IP and an integer for the running SimulationServer.</span>
+<span class="sd">      AUTHKEY (str) :</span>
+<span class="sd">          A string containing the authorisation key for the listener method.</span>
+<span class="sd">      DELAY (float) :</span>
+<span class="sd">          The length of time the SimulationClient should wait if there is no new available jobs, before attempting to</span>
+<span class="sd">          contact the SimulationServer again.</span>
+<span class="sd">      METRIC_SERVERS :</span>
+<span class="sd">          A list containing tuples of addresses for SimulationPotential instances.</span>
+<span class="sd">      ID (str) :</span>
+<span class="sd">          A string that uniquely identifies the client amongst all other clients in the computation.</span>
+<span class="sd">      MASS_MATRIX (numpy.array) :</span>
+<span class="sd">          A NumPy matrix containing the mass matrix of the molecular system. Produced automatically from the Atomistic</span>
+<span class="sd">          Simulation Environment.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="SimulationClient.__init__"><a class="viewcode-back" href="../../SimulationClient.html#SimulationClient.SimulationClient.SimulationClient.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">simulation_client_id</span><span class="p">,</span> <span class="n">server_host</span><span class="p">,</span> <span class="n">server_port</span><span class="p">,</span> <span class="n">authkey</span><span class="p">,</span> <span class="n">metric_server_addresses</span><span class="p">,</span>
+                 <span class="n">configuration_file</span><span class="p">,</span> <span class="n">logfile</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">log_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">callback_delay</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;The constructor for the SimulationClient class.</span>
+
+<span class="sd">        Note:</span>
+<span class="sd">          This class is intended to be used in conjunction with running SimulationServer and SimulationPotential</span>
+<span class="sd">          objects. It will cause a runtime exception if this condition isn&#39;t satisfied.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">          simulation_client_id (str) :</span>
+<span class="sd">              A string that uniquely identifies the client amongst all other clients in the computation.</span>
+<span class="sd">          server_host (str) :</span>
+<span class="sd">              The TCP/IP hostname of the running SimulationServer instance.</span>
+<span class="sd">          server_port (int) :</span>
+<span class="sd">              The port number that the SimulationServer instance is communicating on.</span>
+<span class="sd">          authkey (str, optional) :</span>
+<span class="sd">              Authentication key used to secure process communications. Default to None for local computations to</span>
+<span class="sd">              increase speed.</span>
+<span class="sd">          metric_server_addresses :</span>
+<span class="sd">              A list containing tuples of the type (str, int) containing the hostnames and ports for the running</span>
+<span class="sd">              SimulationPotential instances.</span>
+<span class="sd">          configuration_file (str) :</span>
+<span class="sd">              Directory and filename of the configuration file.</span>
+<span class="sd">          logfile (str, optional) :</span>
+<span class="sd">              Directory and filename of the log file. Is created if doesn&#39;t exist, overwritten if it does.</span>
+<span class="sd">          log_level (int, optional) :</span>
+<span class="sd">              Specify level of logging required as described in the logging package documentation.</span>
+<span class="sd">          callback_delay (float) :</span>
+<span class="sd">              The length of time the SimulationClient should wait if there is no new available jobs, before attempting</span>
+<span class="sd">               to contact the SimulationServer again.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c"># Set the SimulationClient log output to write to logfile at prescribed log level if specified. Otherwise write</span>
+        <span class="c"># to console output. Setting to DEBUG will cause poor performance and should only be used to debug.</span>
+        <span class="k">if</span> <span class="n">logfile</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">logfile</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">log_level</span><span class="p">,</span> <span class="n">filemode</span><span class="o">=</span><span class="s">&#39;w&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+        <span class="c"># Read configuration from configuration_file and store in SimulationPotential&#39;s CONFIGURATION attribute.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">CONFIGURATION</span> <span class="o">=</span> <span class="n">Configuration_Processing</span><span class="o">.</span><span class="n">read_configuration_file</span><span class="p">(</span><span class="n">configuration_file</span><span class="p">)</span>
+
+        <span class="c"># Set ADDRESS and AUTHKEY attributes for Client object in the start_client method.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">CURVE_ADDRESS</span> <span class="o">=</span> <span class="p">(</span><span class="n">server_host</span><span class="p">,</span> <span class="n">server_port</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">AUTHKEY</span> <span class="o">=</span> <span class="n">authkey</span>
+
+        <span class="c"># Set the callback delay as described in the attributes.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">DELAY</span> <span class="o">=</span> <span class="n">callback_delay</span>
+
+        <span class="c"># Store the ADDRESS and AUTHKEY attributes for Client objects in the start_client method used to compute the</span>
+        <span class="c"># metric values.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">METRIC_SERVERS</span> <span class="o">=</span> <span class="n">metric_server_addresses</span>
+
+        <span class="c"># Set the client&#39;s unique identifier.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ID</span> <span class="o">=</span> <span class="n">simulation_client_id</span>
+
+        <span class="c"># Compute the mass matrix for the molecular system.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">MASS_MATRIX</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">CONFIGURATION</span><span class="p">[</span><span class="s">&#39;molecule&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_masses</span><span class="p">(),)</span> <span class="o">*</span>
+                                             <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONFIGURATION</span><span class="p">[</span><span class="s">&#39;dimension&#39;</span><span class="p">]</span> <span class="o">/</span>
+                                              <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONFIGURATION</span><span class="p">[</span><span class="s">&#39;molecule&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get_masses</span><span class="p">())))</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+
+</div>
+<div class="viewcode-block" id="SimulationClient.start_client"><a class="viewcode-back" href="../../SimulationClient.html#SimulationClient.SimulationClient.SimulationClient.start_client">[docs]</a>    <span class="k">def</span> <span class="nf">start_client</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Start the instance of SimulationClient and begin computing local geodesics.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># Define a flag to indicate if contact with the SimulationServer instance is possible.</span>
+        <span class="n">connection_made</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="c"># Create a response to send to the SimulationServer indicating that this is the first time this SimulationClient</span>
+        <span class="c"># has attempted to get a task.</span>
+        <span class="n">client_response</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;status_code&#39;</span><span class="p">:</span> <span class="n">comm_code</span><span class="p">(</span><span class="s">&#39;CLIENT_FIRST_CONTACT&#39;</span><span class="p">),</span>
+                           <span class="s">&#39;client_name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">}</span>
+
+        <span class="c"># Attempt to connect to the SimulationServer instance.</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c"># Create a Client object that communicates with the listener on CURVE_ADDRESS using password AUTHKEY.</span>
+            <span class="n">server</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CURVE_ADDRESS</span><span class="p">,</span> <span class="n">authkey</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">AUTHKEY</span><span class="p">)</span>
+
+            <span class="c"># When a connection is made send the client message.</span>
+            <span class="n">server</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">client_response</span><span class="p">)</span>
+
+            <span class="c"># The client assumes the server will respond with a message, either a local geodesic to compute or a message</span>
+            <span class="c"># asking the client to try again after DELAY seconds.</span>
+            <span class="n">server_response</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+
+            <span class="c"># Interpret the servers response by first extracting the status_code variable from the response.</span>
+            <span class="n">server_response_code</span> <span class="o">=</span> <span class="n">server_response</span><span class="p">[</span><span class="s">&#39;status_code&#39;</span><span class="p">]</span>
+
+            <span class="c"># Close the connection to the server at this point to allow other clients to communicate with the</span>
+            <span class="c"># SimulationServer.</span>
+            <span class="n">server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="c"># Store in the connection_made flag that it was possible to create a connection.</span>
+            <span class="n">connection_made</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="c"># If it isn&#39;t possible to connect to the server than a socket.error exception is raised.</span>
+        <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">:</span>
+            <span class="c"># Write an error to the log for this client indicating that the connection couldn&#39;t be made.</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">&#39;Failed to Make Connection to SimulationServer. Shutting down client.&#39;</span><span class="p">)</span>
+
+            <span class="c"># Send a signal to the running instances of SimulationPotential that the SimulationClient would have used</span>
+            <span class="c"># indicating that they should also shutdown.</span>
+            <span class="n">shutdown_metric</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">METRIC_SERVERS</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">AUTHKEY</span><span class="p">)</span>
+
+        <span class="c"># This is the main loop of the SimulationClient - the program stops running when it is no longer possible to</span>
+        <span class="c"># communicate with the SimulationServer. This is decided by the connection_made flag.</span>
+        <span class="k">while</span> <span class="n">connection_made</span><span class="p">:</span>
+
+            <span class="c"># At this point in the code a new server_response should have been received. How the SimulationClient reacts</span>
+            <span class="c"># depends on the communication code received.</span>
+
+            <span class="c"># If the server has indicated it is giving the SimulationClient a new geodesic to compute then...</span>
+            <span class="k">if</span> <span class="n">server_response_code</span> <span class="o">==</span> <span class="n">comm_code</span><span class="p">(</span><span class="s">&#39;SERVER_GIVES_NEW_TASK&#39;</span><span class="p">):</span>
+
+                <span class="c"># Compute the rescaled tangent direction of the curve as store as a NumPy array.</span>
+                <span class="n">tangent_direction</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CONFIGURATION</span><span class="p">[</span><span class="s">&#39;local_number_of_nodes&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">*</span> \
+                    <span class="n">np</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">server_response</span><span class="p">[</span><span class="s">&#39;right_end_point&#39;</span><span class="p">],</span> <span class="n">server_response</span><span class="p">[</span><span class="s">&#39;left_end_point&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s">&#39;float64&#39;</span><span class="p">)</span>
+
+                <span class="c"># Compute the local geodesic using the BFGS method and store the NumPy array in result</span>
+                <span class="n">result</span> <span class="o">=</span> \
+                    <span class="n">find_geodesic_midpoint</span><span class="p">(</span><span class="n">server_response</span><span class="p">[</span><span class="s">&#39;left_end_point&#39;</span><span class="p">],</span>
+                                                <span class="n">server_response</span><span class="p">[</span><span class="s">&#39;right_end_point&#39;</span><span class="p">],</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">CONFIGURATION</span><span class="p">[</span><span class="s">&#39;local_number_of_nodes&#39;</span><span class="p">],</span>
+                                                <span class="n">la</span><span class="o">.</span><span class="n">orthonormal_tangent_basis</span><span class="p">(</span><span class="n">tangent_direction</span><span class="p">,</span>
+                                                                          <span class="bp">self</span><span class="o">.</span><span class="n">CONFIGURATION</span><span class="p">[</span><span class="s">&#39;dimension&#39;</span><span class="p">]),</span>
+                                                <span class="n">tangent_direction</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">CONFIGURATION</span><span class="p">[</span><span class="s">&#39;codimension&#39;</span><span class="p">],</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">METRIC_SERVERS</span><span class="p">,</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">MASS_MATRIX</span><span class="p">,</span>
+                                                <span class="bp">self</span><span class="o">.</span><span class="n">AUTHKEY</span><span class="p">)</span>
+
+                <span class="c"># If the function find_geodesic_midpoint returned a None object then it couldn&#39;t contact it&#39;s</span>
+                <span class="c"># SimulationPotential instances and should be restarted.</span>
+                <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="c"># Tell the user via the log that the SimulationPotential instances couldn&#39;t be contacted.</span>
+                    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">&#39;Failed to Make Connection to SimulationPotential. Shutting down client.&#39;</span><span class="p">)</span>
+
+                    <span class="c"># Exit the main loop of the SimulationClient.</span>
+                    <span class="k">break</span>
+
+                <span class="c"># If there is a midpoint then construct a client response to tell the server which node has which new</span>
+                <span class="c"># position.</span>
+                <span class="n">client_response</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;status_code&#39;</span><span class="p">:</span> <span class="n">comm_code</span><span class="p">(</span><span class="s">&#39;CLIENT_HAS_MIDPOINT_DATA&#39;</span><span class="p">),</span>
+                                   <span class="s">&#39;node_number&#39;</span><span class="p">:</span> <span class="n">server_response</span><span class="p">[</span><span class="s">&#39;node_number&#39;</span><span class="p">],</span>
+                                   <span class="s">&#39;new_node_position&#39;</span><span class="p">:</span> <span class="n">result</span><span class="p">,</span>
+                                   <span class="s">&#39;client_name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span>
+                                   <span class="p">}</span>
+
+            <span class="c"># Otherwise if the server has asked the SimulationClient to try again later...</span>
+            <span class="k">elif</span> <span class="n">server_response_code</span> <span class="o">==</span> <span class="n">comm_code</span><span class="p">(</span><span class="s">&#39;SERVER_REQUEST_CALLBACK&#39;</span><span class="p">):</span>
+                <span class="c"># Make the SimulationClient wait for DELAY seconds</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">DELAY</span><span class="p">)</span>
+
+                <span class="c"># Create a response to tell the SimulationServer that the SimulationClient would like a new job.</span>
+                <span class="n">client_response</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;status_code&#39;</span><span class="p">:</span> <span class="n">comm_code</span><span class="p">(</span><span class="s">&#39;CLIENT_HAS_NO_TASK&#39;</span><span class="p">),</span> <span class="s">&#39;client_name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ID</span><span class="p">}</span>
+
+            <span class="c"># Attempt to connect to the SimulationServer instance.</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="c"># Create a Client object that communicates with the listener on CURVE_ADDRESS using password AUTHKEY.</span>
+                <span class="n">server</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">CURVE_ADDRESS</span><span class="p">,</span> <span class="n">authkey</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">AUTHKEY</span><span class="p">)</span>
+
+                <span class="c"># When a connection is made send the client message.</span>
+                <span class="n">server</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">client_response</span><span class="p">)</span>
+
+                <span class="c"># The client assumes the server will respond with a message, either a local geodesic to compute or a</span>
+                <span class="c"># message asking the client to try again after DELAY seconds.</span>
+                <span class="n">server_response</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
+
+                <span class="c"># Interpret the servers response by first extracting the status_code variable from the response.</span>
+                <span class="n">server_response_code</span> <span class="o">=</span> <span class="n">server_response</span><span class="p">[</span><span class="s">&#39;status_code&#39;</span><span class="p">]</span>
+
+                <span class="c"># Close the connection to the server at this point to allow other clients to communicate with the</span>
+                <span class="c"># SimulationServer.</span>
+                <span class="n">server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="c"># If it isn&#39;t possible to connect to the server than a socket.error exception is raised.</span>
+            <span class="k">except</span> <span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="ne">EOFError</span><span class="p">):</span>
+                <span class="c"># Write an error to the log for this client indicating that the connection couldn&#39;t be made.</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s">&#39;Failed to Make Connection to SimulationServer. Shutting down client.&#39;</span><span class="p">)</span>
+
+                <span class="c"># Send a signal to the running instances of SimulationPotential that the SimulationClient would have</span>
+                <span class="c"># used indicating that they should also shutdown.</span>
+                <span class="n">shutdown_metric</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">METRIC_SERVERS</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">AUTHKEY</span><span class="p">)</span>
+
+                <span class="c"># Exit the main loop of the SimulationClient.</span>
+                <span class="k">break</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Daniel C. Sutton.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

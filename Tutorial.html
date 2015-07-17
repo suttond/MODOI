@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial &mdash; MOlecular Dynamics Over Ip - University of Bath</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MOlecular Dynamics Over Ip - University of Bath" href="index.html"/>
+        <link rel="next" title="Implementations" href="Implementations.html"/>
+        <link rel="prev" title="The Algorithm" href="Algorithm.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> MODOI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Algorithm.html">The Algorithm</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#butane-simulation">Butane Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuring-modoi-for-butane">Configuring MODOI for Butane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-simulation">Running the Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Implementations.html">Implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Local_Simulation.html">Local_Simulation Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SimulationClient.html">SimulationClient Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.SimulationClient">SimulationClient.SimulationClient Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.CustomBFGS">SimulationClient.CustomBFGS Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.Geometric">SimulationClient.Geometric Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.LinearAlgebra">SimulationClient.LinearAlgebra Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.MetricValues">SimulationClient.MetricValues Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimulationPotential.html">SimulationPotential Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimulationServer.html">SimulationServer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimulationUtilities.html">SimulationUtilities Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Communication_Codes">SimulationUtilities.Communication_Codes Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Configuration_Processing">SimulationUtilities.Configuration_Processing Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Curve">SimulationUtilities.Curve Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Extract_States_PDB">SimulationUtilities.Extract_States_PDB Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Visualize">SimulationUtilities.Visualize Module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MODOI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="butane-simulation">
+<h2>Butane Simulation<a class="headerlink" href="#butane-simulation" title="Permalink to this headline">¶</a></h2>
+<p>In this tutorial we will use the MODOI package to compute the transition path for a butane molecule between it&#8217;s trans
+and gauche states.</p>
+</div>
+<div class="section" id="configuring-modoi-for-butane">
+<h2>Configuring MODOI for Butane<a class="headerlink" href="#configuring-modoi-for-butane" title="Permalink to this headline">¶</a></h2>
+<p>First copy the files x0.xyz and xN.xyz from <em>&lt;modoi-install-path&gt;/Examples/Butane/</em> into <em>&lt;modoi-install-path&gt;/Experiment/</em>.
+This will describe the start and end configurations of the Butane molecule to the MODOI software.</p>
+<p>Next we need to tell MODOI under what conditions to perform the experiment. This is achieved using a .bkhf file.
+Create a blank text file called Example.bkhf in &lt;modoi-install-path&gt;/Experiment/. In this file write the following</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">st</span> <span class="o">=</span> <span class="n">x0</span><span class="o">.</span><span class="n">xyz</span>
+<span class="n">en</span> <span class="o">=</span> <span class="n">xN</span><span class="o">.</span><span class="n">xyz</span>
+<span class="n">ln</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">gn</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">pa</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">to</span> <span class="o">=</span> <span class="mf">0.025</span>
+</pre></div>
+</div>
+<p>The parameters sn and en tell MODOI where to find the XYZ files for the start and end configurations. The parameter ln
+tells MODOI how many discretisation points to use when computing the local geodesics and the parameter gn tells MODOI
+how many discretisation points to use for the global geodesic. In principle, increasing ln improves the accuracy of the
+final solution but is computationally expensive when large. The parameter pa corresponds to the total energy of the
+mechanical system. The parameter tol determines how close to the true solution the simulation should be before stopping.</p>
+<p>MODOI is now configured to perform a Butane simulation. Any other information the program requires is inferred from the
+above information.</p>
+</div>
+<div class="section" id="running-the-simulation">
+<h2>Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permalink to this headline">¶</a></h2>
+<p>To run the simulation simply start the script &#8216;Local_Simulation.py&#8217; using the command</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span> <span class="n">Local_Simulation</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>in a shell/terminal window navigated to <em>&lt;modoi-install-path&gt;/</em>.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Implementations.html" class="btn btn-neutral float-right" title="Implementations" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Algorithm.html" class="btn btn-neutral" title="The Algorithm" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Daniel C. Sutton.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

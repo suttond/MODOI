@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SimulationUtilities Package &mdash; MOlecular Dynamics Over Ip - University of Bath</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MOlecular Dynamics Over Ip - University of Bath" href="index.html"/>
+        <link rel="up" title="Components" href="Components.html"/>
+        <link rel="prev" title="SimulationServer Module" href="SimulationServer.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> MODOI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Algorithm.html">The Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#butane-simulation">Butane Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#configuring-modoi-for-butane">Configuring MODOI for Butane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#running-the-simulation">Running the Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Implementations.html">Implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Local_Simulation.html">Local_Simulation Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Components.html">Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SimulationClient.html">SimulationClient Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.SimulationClient">SimulationClient.SimulationClient Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.CustomBFGS">SimulationClient.CustomBFGS Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.Geometric">SimulationClient.Geometric Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.LinearAlgebra">SimulationClient.LinearAlgebra Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.MetricValues">SimulationClient.MetricValues Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimulationPotential.html">SimulationPotential Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimulationServer.html">SimulationServer Module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">SimulationUtilities Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-SimulationUtilities.Communication_Codes">SimulationUtilities.Communication_Codes Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-SimulationUtilities.Configuration_Processing">SimulationUtilities.Configuration_Processing Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-SimulationUtilities.Curve">SimulationUtilities.Curve Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-SimulationUtilities.Extract_States_PDB">SimulationUtilities.Extract_States_PDB Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-SimulationUtilities.Visualize">SimulationUtilities.Visualize Module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MODOI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="Components.html">Components</a> &raquo;</li>
+      
+    <li>SimulationUtilities Package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="simulationutilities-package">
+<h1>SimulationUtilities Package<a class="headerlink" href="#simulationutilities-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-SimulationUtilities.Communication_Codes">
+<span id="simulationutilities-communication-codes-module"></span><h2>SimulationUtilities.Communication_Codes Module<a class="headerlink" href="#module-SimulationUtilities.Communication_Codes" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="SimulationUtilities.Communication_Codes.comm_code">
+<code class="descclassname">SimulationUtilities.Communication_Codes.</code><code class="descname">comm_code</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Communication_Codes.html#comm_code"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Communication_Codes.comm_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a string describing the type of communication being made and converts it to a machine
+friendly value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>label</strong> (<em>str</em>) &#8211; The human-readable form of the communication code.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The machine-readable form of the communication code.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-SimulationUtilities.Configuration_Processing">
+<span id="simulationutilities-configuration-processing-module"></span><h2>SimulationUtilities.Configuration_Processing Module<a class="headerlink" href="#module-SimulationUtilities.Configuration_Processing" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="SimulationUtilities.Configuration_Processing.convert_atoms_to_vector">
+<code class="descclassname">SimulationUtilities.Configuration_Processing.</code><code class="descname">convert_atoms_to_vector</code><span class="sig-paren">(</span><em>atoms</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Configuration_Processing.html#convert_atoms_to_vector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Configuration_Processing.convert_atoms_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts an Atomistic Simulation Environment atoms object into a vector which can be used with the curve
+shortening algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>atoms</strong> (<em>ase.atoms</em>) &#8211; The ASE atoms object whose position is to be converted to a vector.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A vector of atomistic positions.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="SimulationUtilities.Configuration_Processing.convert_vector_to_atoms">
+<code class="descclassname">SimulationUtilities.Configuration_Processing.</code><code class="descname">convert_vector_to_atoms</code><span class="sig-paren">(</span><em>vector</em>, <em>dimension=3</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Configuration_Processing.html#convert_vector_to_atoms"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Configuration_Processing.convert_vector_to_atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>The inverse of convert_atoms_to_vector.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vector</strong> (<em>numpy.array</em>) &#8211; The vector containing the position of the atoms to be converted.</li>
+<li><strong>dimension</strong> (<em>optional int</em>) &#8211; The dimension of the space in which the simulation is taking place. The default value is 3.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">An ASE atoms object friendly NumPy array containing the atomistic positions.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="SimulationUtilities.Configuration_Processing.read_configuration_file">
+<code class="descclassname">SimulationUtilities.Configuration_Processing.</code><code class="descname">read_configuration_file</code><span class="sig-paren">(</span><em>configuration_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Configuration_Processing.html#read_configuration_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Configuration_Processing.read_configuration_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import the configuration file and store the parsed values in a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>configuration_file</strong> (<em>str</em>) &#8211; The address of the configuration file as required by the Python open command.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A dictionary containing the parsed values from the configuration file.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-SimulationUtilities.Curve">
+<span id="simulationutilities-curve-module"></span><h2>SimulationUtilities.Curve Module<a class="headerlink" href="#module-SimulationUtilities.Curve" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="SimulationUtilities.Curve.Curve">
+<em class="property">class </em><code class="descclassname">SimulationUtilities.Curve.</code><code class="descname">Curve</code><span class="sig-paren">(</span><em>start_point</em>, <em>end_point</em>, <em>number_of_nodes</em>, <em>total_number_of_nodes</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Curve.html#Curve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Curve.Curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>The purpose of this object is to provide a Curve object that has similar behaviour to that described in [Sutton2013].</p>
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.start_point">
+<code class="descname">start_point</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.start_point" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>numpy.array</em></p>
+<p>A NumPy array describing the first point in the curve.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.end_point">
+<code class="descname">end_point</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.end_point" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>numpy.array</em></p>
+<p>A NumPy array describing the last point in the curve.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.number_of_nodes">
+<code class="descname">number_of_nodes</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.number_of_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em></p>
+<p>The total number of nodes that the curve is to consist of, including the start and end points.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.total_number_of_nodes">
+<code class="descname">total_number_of_nodes</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.total_number_of_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em></p>
+<p>The total number of nodes in the curve, including local_nodes - only used to compute the correct scaling of the tangent vector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.tangent">
+<code class="descname">tangent</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.tangent" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>numpy.array</em></p>
+<p>The tangent of the straight line segment joining the start_point to the end_point, rescaled according to [Sutton2013].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.points">
+<code class="descname">points</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.points" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>numpy.array</em></p>
+<p>An NumPy array containing all the points of the curve.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.default_initial_state">
+<code class="descname">default_initial_state</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.default_initial_state" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>numpy.array</em></p>
+<p>A NumPy array consisting of flags that indicate which nodes are movable initially.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.movement">
+<code class="descname">movement</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.movement" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>float</em></p>
+<p>A variable which records the total movement of the curve as calculated in [Sutton2013].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.nodes_moved">
+<code class="descname">nodes_moved</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.nodes_moved" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>numpy.array</em></p>
+<p>A binary NumPy array indicating whether a node has been moved. Used to determine when all the nodes in the curve have been moved.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.node_movable">
+<code class="descname">node_movable</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.node_movable" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>numpy.array</em></p>
+<p>A binary NumPy array indicating whether a node is movable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.number_of_distinct_nodes_moved">
+<code class="descname">number_of_distinct_nodes_moved</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.number_of_distinct_nodes_moved" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>int</em></p>
+<p>A counter recording the total number of nodes that have moved.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="SimulationUtilities.Curve.Curve.configuration">
+<code class="descname">configuration</code><a class="headerlink" href="#SimulationUtilities.Curve.Curve.configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>dict</em></p>
+<p>A dictionary containing the information from the configuration file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="SimulationUtilities.Curve.Curve.all_nodes_moved">
+<code class="descname">all_nodes_moved</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Curve.html#Curve.all_nodes_moved"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Curve.Curve.all_nodes_moved" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method determines whether every node in the global curve has been tested for length reduction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if all of the nodes have been tested, False otherwise.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SimulationUtilities.Curve.Curve.get_points">
+<code class="descname">get_points</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Curve.html#Curve.get_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Curve.Curve.get_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor method for the points attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An array containing all of the points of the curve.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SimulationUtilities.Curve.Curve.next_movable_node">
+<code class="descname">next_movable_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Curve.html#Curve.next_movable_node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Curve.Curve.next_movable_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine next movable node, given existing information about previously distributed nodes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The node number of the next movable node. If no such node exists then it returns None.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SimulationUtilities.Curve.Curve.set_node_movable">
+<code class="descname">set_node_movable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Curve.html#Curve.set_node_movable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Curve.Curve.set_node_movable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all of the flags in the curve to indicate that the nodes in default_initial_state are movable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>node_number</strong> (<em>int</em>) &#8211; The node number of the node whose position is to be updated.</li>
+<li><strong>new_position</strong> (<em>numpy.array</em>) &#8211; The new position of the node.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="SimulationUtilities.Curve.Curve.set_node_position">
+<code class="descname">set_node_position</code><span class="sig-paren">(</span><em>node_number</em>, <em>new_position</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Curve.html#Curve.set_node_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Curve.Curve.set_node_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the position of the node at node_number to new_position. This processes the logic for releasing
+neighbouring nodes for further computation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>node_number</strong> (<em>int</em>) &#8211; The node number of the node whose position is to be updated.</li>
+<li><strong>new_position</strong> (<em>numpy.array</em>) &#8211; The new position of the node.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-SimulationUtilities.Extract_States_PDB">
+<span id="simulationutilities-extract-states-pdb-module"></span><h2>SimulationUtilities.Extract_States_PDB Module<a class="headerlink" href="#module-SimulationUtilities.Extract_States_PDB" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="SimulationUtilities.Extract_States_PDB.extract_states_pdb">
+<code class="descclassname">SimulationUtilities.Extract_States_PDB.</code><code class="descname">extract_states_pdb</code><span class="sig-paren">(</span><em>pdb_filename</em>, <em>x0_location</em>, <em>xN_location</em>, <em>x0_index</em>, <em>xN_index</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Extract_States_PDB.html#extract_states_pdb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Extract_States_PDB.extract_states_pdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is an ASE wrapper that produces a start and end configuration from a PDB file containing multiple
+conformation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pdb_filename</strong> (<em>str</em>) &#8211; The location of the PDB file.</li>
+<li><strong>x0_location</strong> (<em>str</em>) &#8211; The location of where to write the x0.xyz file, that is the starting configuration.</li>
+<li><strong>xN_location</strong> (<em>str</em>) &#8211; The location of where to write the xN.xyz file, the final configuration.</li>
+<li><strong>x0_index</strong> (<em>int</em>) &#8211; The index in the PDB file of the starting configuration.</li>
+<li><strong>xN_index</strong> (<em>int</em>) &#8211; The index in the PDB file of the final configuration.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-SimulationUtilities.Visualize">
+<span id="simulationutilities-visualize-module"></span><h2>SimulationUtilities.Visualize Module<a class="headerlink" href="#module-SimulationUtilities.Visualize" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="SimulationUtilities.Visualize.write_xyz_animation">
+<code class="descclassname">SimulationUtilities.Visualize.</code><code class="descname">write_xyz_animation</code><span class="sig-paren">(</span><em>curve_pickle</em>, <em>filename</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/SimulationUtilities/Visualize.html#write_xyz_animation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#SimulationUtilities.Visualize.write_xyz_animation" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes a curve object that has been pickled and writes out an XYZ animation file to use with JMol.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>curve_pickle</strong> (<em>str</em>) &#8211; The location of a pickled curve object.</li>
+<li><strong>filename</strong> (<em>str</em>) &#8211; The location of where to write the XYZ animation.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="SimulationServer.html" class="btn btn-neutral" title="SimulationServer Module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Daniel C. Sutton.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SimulationClient.LinearAlgebra &mdash; MOlecular Dynamics Over Ip - University of Bath</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MOlecular Dynamics Over Ip - University of Bath" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> MODOI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Algorithm.html">The Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#butane-simulation">Butane Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#configuring-modoi-for-butane">Configuring MODOI for Butane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#running-the-simulation">Running the Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Implementations.html">Implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Local_Simulation.html">Local_Simulation Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationClient.html">SimulationClient Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.SimulationClient">SimulationClient.SimulationClient Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.CustomBFGS">SimulationClient.CustomBFGS Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.Geometric">SimulationClient.Geometric Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.LinearAlgebra">SimulationClient.LinearAlgebra Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.MetricValues">SimulationClient.MetricValues Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationPotential.html">SimulationPotential Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationServer.html">SimulationServer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationUtilities.html">SimulationUtilities Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Communication_Codes">SimulationUtilities.Communication_Codes Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Configuration_Processing">SimulationUtilities.Configuration_Processing Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Curve">SimulationUtilities.Curve Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Extract_States_PDB">SimulationUtilities.Extract_States_PDB Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Visualize">SimulationUtilities.Visualize Module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">MODOI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>SimulationClient.LinearAlgebra</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for SimulationClient.LinearAlgebra</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">orth</span>
+
+<div class="viewcode-block" id="mass_norm"><a class="viewcode-back" href="../../SimulationClient.html#SimulationClient.LinearAlgebra.mass_norm">[docs]</a><span class="k">def</span> <span class="nf">mass_norm</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">mass_matrix</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; This function computes the inner product of vector with mass_matrix times vector.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      vector (numpy.array): The curve for which the length is to be computed.</span>
+<span class="sd">      mass_matrix (numpy.array): A diagonal NumPy array containing the masses of the molecular system as computed in the SimulationClient object.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      float: The value of &lt;vector, mass_matrix * vector&gt;</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">inner</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">mass_matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">vector</span><span class="p">)))</span>
+
+</div>
+<div class="viewcode-block" id="orthonormal_tangent_basis"><a class="viewcode-back" href="../../SimulationClient.html#SimulationClient.LinearAlgebra.orthonormal_tangent_basis">[docs]</a><span class="k">def</span> <span class="nf">orthonormal_tangent_basis</span><span class="p">(</span><span class="n">tangent</span><span class="p">,</span> <span class="n">dimension</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; This function computes the inner product of vector with mass_matrix times vector.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      tangent (numpy.array): The tangent direction along the local geodesic.</span>
+<span class="sd">      dimension (int): The dimension of the problem. Computed from the atomistic simulation environment.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      numpy.array: An orthonomal matrix with the first column parallel to tangent.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c"># Set the first column of our output matrix as tangent</span>
+    <span class="n">mx</span> <span class="o">=</span> <span class="n">tangent</span>
+
+    <span class="c"># Find the first non-zero entry of the tangent vector (exists as start and endpoints are different)</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">mx</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c"># For the remaining dim - 1 columns choose unit basis vectors of the form (0,...,0,1,0,...,0) with the nonzero entry</span>
+    <span class="c"># not in position j.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dimension</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">j</span> <span class="o">!=</span> <span class="n">i</span><span class="p">:</span>
+            <span class="n">e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">dimension</span><span class="p">)</span>
+            <span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">mx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">mx</span><span class="p">,</span> <span class="n">e</span><span class="p">))</span>
+
+    <span class="n">mx</span> <span class="o">=</span> <span class="n">mx</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+
+    <span class="c"># With the resulting matrix, perform the Gram-Schmidt orthonormalisation procedure on the transpose of the matrix</span>
+    <span class="c"># and return it.</span>
+    <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span>
+    <span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">])</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">])</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+
+        <span class="n">v</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">mx</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span><span class="p">):</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Q</span><span class="p">[:,</span><span class="n">i</span><span class="p">],</span> <span class="n">mx</span><span class="p">[:,</span><span class="n">j</span><span class="p">]);</span> <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">r</span>
+            <span class="n">v</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:]</span> <span class="o">-</span> <span class="n">r</span><span class="o">*</span><span class="n">Q</span><span class="p">[:,</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">);</span> <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">,</span><span class="n">j</span><span class="p">]</span><span class="o">=</span> <span class="n">r</span>
+        <span class="n">Q</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:]</span><span class="o">/</span><span class="n">r</span>
+
+    <span class="k">return</span> <span class="n">Q</span>
+
+</div>
+<div class="viewcode-block" id="shifts_to_curve"><a class="viewcode-back" href="../../SimulationClient.html#SimulationClient.LinearAlgebra.shifts_to_curve">[docs]</a><span class="k">def</span> <span class="nf">shifts_to_curve</span><span class="p">(</span><span class="n">start_point</span><span class="p">,</span> <span class="n">end_point</span><span class="p">,</span> <span class="n">shift_points</span><span class="p">,</span> <span class="n">number_of_inner_points</span><span class="p">,</span> <span class="n">basis_rotation_matrix</span><span class="p">,</span>
+                    <span class="n">tangent_direction</span><span class="p">,</span> <span class="n">codimension</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot; This function produces a curve in N-dimensional space when it is initially described as a graph over the first co-ordinate direction.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      start_point (numpy.array): The first end point of the curve.</span>
+<span class="sd">      end_point (numpy.array): The last end point of the curve.</span>
+<span class="sd">      shift_points (numpy.array): Given a point x_N along the curve, the value shift_points[i] is x_N - &lt;x_N, tangent_direction&gt;tangent_direction. That is the orthogonal component of x_N when projected against the tangent_direction.</span>
+<span class="sd">      number_of_inner_points (int): The number of nodes along the curve, less the end points.</span>
+<span class="sd">      basis_rotation_matrix (numpy.array): The matrix computed as a result of the orthogonal_tangent_basis function.</span>
+<span class="sd">      tangent_direction (numpy.array): The tangent direction as computed by the SimulationClient.</span>
+<span class="sd">      codimension (int): The dimension of the problem minus 1. Computed from the atomistic simulation environment.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      list: A list of NumPy arrays describing the position of the curve.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c"># Compute tangent direction of line joining start and end points</span>
+    <span class="n">tangent</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">end_point</span><span class="p">,</span> <span class="n">start_point</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">number_of_inner_points</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c"># Initialise list to store points</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c"># Generate points that are uniformly distributed along the initial line</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">number_of_inner_points</span><span class="o">+</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">start_point</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">tangent</span><span class="p">))</span>
+
+    <span class="c"># Shift the points as encoded in x</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">shift_points</span><span class="p">)</span><span class="o">/</span><span class="n">codimension</span><span class="p">):</span>
+
+        <span class="c"># Embed vector i into co_dimension + 1 dimensional space</span>
+        <span class="n">unrotated_shift</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">shift_points</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">codimension</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">codimension</span><span class="p">]))</span>
+
+        <span class="c"># Convert vector, by rotation, from shift from e_1 basis direction to shift from tangent direction</span>
+        <span class="n">shift</span> <span class="o">=</span> <span class="n">basis_rotation_matrix</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">unrotated_shift</span><span class="p">)</span>
+
+        <span class="c"># Append point to list</span>
+        <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">shift</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">points</span></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Daniel C. Sutton.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

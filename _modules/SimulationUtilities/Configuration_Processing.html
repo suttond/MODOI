@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SimulationUtilities.Configuration_Processing &mdash; MOlecular Dynamics Over Ip - University of Bath</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MOlecular Dynamics Over Ip - University of Bath" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../../index.html" class="icon icon-home"> MODOI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Algorithm.html">The Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#butane-simulation">Butane Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#configuring-modoi-for-butane">Configuring MODOI for Butane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Tutorial.html#running-the-simulation">Running the Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Implementations.html">Implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Local_Simulation.html">Local_Simulation Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationClient.html">SimulationClient Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.SimulationClient">SimulationClient.SimulationClient Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.CustomBFGS">SimulationClient.CustomBFGS Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.Geometric">SimulationClient.Geometric Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.LinearAlgebra">SimulationClient.LinearAlgebra Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationClient.html#module-SimulationClient.MetricValues">SimulationClient.MetricValues Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationPotential.html">SimulationPotential Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationServer.html">SimulationServer Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../SimulationUtilities.html">SimulationUtilities Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Communication_Codes">SimulationUtilities.Communication_Codes Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Configuration_Processing">SimulationUtilities.Configuration_Processing Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Curve">SimulationUtilities.Curve Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Extract_States_PDB">SimulationUtilities.Extract_States_PDB Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SimulationUtilities.html#module-SimulationUtilities.Visualize">SimulationUtilities.Visualize Module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">MODOI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>SimulationUtilities.Configuration_Processing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for SimulationUtilities.Configuration_Processing</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">from</span> <span class="nn">ase.io</span> <span class="kn">import</span> <span class="n">read</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+
+<div class="viewcode-block" id="convert_atoms_to_vector"><a class="viewcode-back" href="../../SimulationUtilities.html#SimulationUtilities.Configuration_Processing.convert_atoms_to_vector">[docs]</a><span class="k">def</span> <span class="nf">convert_atoms_to_vector</span><span class="p">(</span><span class="n">atoms</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Converts an Atomistic Simulation Environment atoms object into a vector which can be used with the curve</span>
+<span class="sd">    shortening algorithm.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      atoms (ase.atoms): The ASE atoms object whose position is to be converted to a vector.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      numpy.array: A vector of atomistic positions.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c"># Create a new NumPy float array.</span>
+    <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="s">&#39;float64&#39;</span><span class="p">)</span>
+
+    <span class="c"># For each atom in the atoms object stack it&#39;s position onto the vector object.</span>
+    <span class="k">for</span> <span class="n">atom</span> <span class="ow">in</span> <span class="n">atoms</span><span class="p">:</span>
+        <span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">vector</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s">&#39;float64&#39;</span><span class="p">)))</span>
+
+    <span class="c"># Return the resulting vector.</span>
+    <span class="k">return</span> <span class="n">vector</span>
+
+</div>
+<div class="viewcode-block" id="convert_vector_to_atoms"><a class="viewcode-back" href="../../SimulationUtilities.html#SimulationUtilities.Configuration_Processing.convert_vector_to_atoms">[docs]</a><span class="k">def</span> <span class="nf">convert_vector_to_atoms</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; The inverse of convert_atoms_to_vector.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      vector (numpy.array): The vector containing the position of the atoms to be converted.</span>
+<span class="sd">      dimension (optional int): The dimension of the space in which the simulation is taking place. The default value is 3.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      numpy.array: An ASE atoms object friendly NumPy array containing the atomistic positions.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s">&#39;float64&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span><span class="o">/</span><span class="n">dimension</span><span class="p">,</span> <span class="n">dimension</span><span class="p">))</span>
+
+</div>
+<div class="viewcode-block" id="read_configuration_file"><a class="viewcode-back" href="../../SimulationUtilities.html#SimulationUtilities.Configuration_Processing.read_configuration_file">[docs]</a><span class="k">def</span> <span class="nf">read_configuration_file</span><span class="p">(</span><span class="n">configuration_file</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Import the configuration file and store the parsed values in a dictionary.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      configuration_file (str): The address of the configuration file as required by the Python open command.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      dict: A dictionary containing the parsed values from the configuration file.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c"># Open the configuration_file in read mode.</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">configuration_file</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span>
+
+    <span class="c"># For each line in the configuration file...</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+
+        <span class="c"># Extract the &#39;command&#39; which is the two letter code to the left of the equals</span>
+        <span class="n">command</span> <span class="o">=</span> <span class="n">line</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="c"># Extract the &#39;value&#39; which is the remaining text to the right of the equals, removing any whitespace</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)[</span><span class="mi">3</span><span class="p">:]</span>
+
+        <span class="c"># Based on the value of the command code...</span>
+        <span class="k">if</span> <span class="n">command</span> <span class="o">==</span> <span class="s">&#39;st&#39;</span><span class="p">:</span>
+            <span class="c"># The location of the .xyz file describing the start configuration is given here and stored as an ASE atoms</span>
+            <span class="c"># object.</span>
+            <span class="n">molecule</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+
+            <span class="c"># The starting point in R^N is then extracted</span>
+            <span class="n">start_point</span> <span class="o">=</span> <span class="n">convert_atoms_to_vector</span><span class="p">(</span><span class="n">molecule</span><span class="o">.</span><span class="n">get_positions</span><span class="p">())</span>
+
+            <span class="c"># The dimension and codimension of the problem are then determined.</span>
+            <span class="n">dimension</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">start_point</span><span class="p">)</span>
+            <span class="n">codimension</span> <span class="o">=</span> <span class="n">dimension</span> <span class="o">-</span> <span class="mi">1</span>
+
+        <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s">&#39;en&#39;</span><span class="p">:</span>
+            <span class="c"># The location of the .xyz file describing the end configuration is given here and stored as an ASE atoms</span>
+            <span class="c"># object.</span>
+            <span class="n">end_point</span> <span class="o">=</span> <span class="n">convert_atoms_to_vector</span><span class="p">(</span><span class="n">read</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span><span class="o">.</span><span class="n">get_positions</span><span class="p">())</span>
+
+        <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s">&#39;ln&#39;</span><span class="p">:</span>
+            <span class="c"># The parameter describing the local number of nodes used in the geodesic computation.</span>
+            <span class="n">local_num_nodes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s">&#39;gn&#39;</span><span class="p">:</span>
+            <span class="c"># The parameter describing the global number of nodes used in the geodesic computation.</span>
+            <span class="n">global_num_nodes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s">&#39;pa&#39;</span><span class="p">:</span>
+            <span class="c"># The parameter which gives the value for E as required by the Maupertuis principle.</span>
+            <span class="n">metric_parameters</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s">&#39;f&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;,&#39;</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s">&#39;to&#39;</span><span class="p">:</span>
+            <span class="c"># The tolerance after which we stop running the global algorithm.</span>
+            <span class="n">tol</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="c"># Return the dictionary.</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">&#39;start_point&#39;</span><span class="p">:</span> <span class="n">start_point</span><span class="p">,</span>
+        <span class="s">&#39;end_point&#39;</span><span class="p">:</span> <span class="n">end_point</span><span class="p">,</span>
+        <span class="s">&#39;dimension&#39;</span><span class="p">:</span> <span class="n">dimension</span><span class="p">,</span>
+        <span class="s">&#39;codimension&#39;</span><span class="p">:</span> <span class="n">codimension</span><span class="p">,</span>
+        <span class="s">&#39;local_number_of_nodes&#39;</span><span class="p">:</span> <span class="n">local_num_nodes</span><span class="p">,</span>
+        <span class="s">&#39;global_number_of_nodes&#39;</span><span class="p">:</span> <span class="n">global_num_nodes</span><span class="p">,</span>
+        <span class="s">&#39;metric_parameters&#39;</span><span class="p">:</span> <span class="n">metric_parameters</span><span class="p">,</span>
+        <span class="s">&#39;tolerance&#39;</span><span class="p">:</span> <span class="n">tol</span><span class="p">,</span>
+        <span class="s">&#39;molecule&#39;</span><span class="p">:</span> <span class="n">molecule</span>
+    <span class="p">}</span></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Daniel C. Sutton.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

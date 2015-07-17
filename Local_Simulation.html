@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Local_Simulation Script &mdash; MOlecular Dynamics Over Ip - University of Bath</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="MOlecular Dynamics Over Ip - University of Bath" href="index.html"/>
+        <link rel="up" title="Implementations" href="Implementations.html"/>
+        <link rel="next" title="Components" href="Components.html"/>
+        <link rel="prev" title="Implementations" href="Implementations.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> MODOI
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Algorithm.html">The Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#butane-simulation">Butane Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#configuring-modoi-for-butane">Configuring MODOI for Butane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tutorial.html#running-the-simulation">Running the Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Implementations.html">Implementations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Local_Simulation Script</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SimulationClient.html">SimulationClient Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.SimulationClient">SimulationClient.SimulationClient Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.CustomBFGS">SimulationClient.CustomBFGS Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.Geometric">SimulationClient.Geometric Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.LinearAlgebra">SimulationClient.LinearAlgebra Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#module-SimulationClient.MetricValues">SimulationClient.MetricValues Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationClient.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimulationPotential.html">SimulationPotential Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimulationPotential.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimulationServer.html">SimulationServer Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimulationServer.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimulationUtilities.html">SimulationUtilities Package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Communication_Codes">SimulationUtilities.Communication_Codes Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Configuration_Processing">SimulationUtilities.Configuration_Processing Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Curve">SimulationUtilities.Curve Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Extract_States_PDB">SimulationUtilities.Extract_States_PDB Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#module-SimulationUtilities.Visualize">SimulationUtilities.Visualize Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimulationUtilities.html#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">MODOI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="Implementations.html">Implementations</a> &raquo;</li>
+      
+    <li>Local_Simulation Script</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="local-simulation-script">
+<h1>Local_Simulation Script<a class="headerlink" href="#local-simulation-script" title="Permalink to this headline">¶</a></h1>
+<p>This is a script that is included in the distribution of MODOI to run a local simulation, that is on a single machine.
+It runs a single instance of SimulationServer and two instances of SimulationClient. Each instance of SimulationClient
+has two instances of SimulationPotential. This particular configuration runs comfortably on a machine with 4 cores. The
+script automatically handles the calculation of port numbers in this case.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">multiprocessing</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">from</span> <span class="nn">SimulationServer.SimulationServer</span> <span class="kn">import</span> <span class="n">SimulationServer</span>
+<span class="kn">from</span> <span class="nn">SimulationClient.SimulationClient</span> <span class="kn">import</span> <span class="n">SimulationClient</span>
+<span class="kn">from</span> <span class="nn">SimulationPotential.SimulationPotential</span> <span class="kn">import</span> <span class="n">SimulationPotential</span>
+
+
+<span class="k">def</span> <span class="nf">startMdServer</span><span class="p">(</span><span class="n">configuration_file</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">,</span> <span class="n">logfile</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">authkey</span><span class="p">,</span> <span class="n">loglevel</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; A function to create and start a SimulationServer instance.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">md_server</span> <span class="o">=</span> <span class="n">SimulationServer</span><span class="p">(</span><span class="n">configuration_file</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">,</span> <span class="n">logfile</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">authkey</span><span class="p">,</span> <span class="n">loglevel</span><span class="p">)</span>
+    <span class="n">md_server</span><span class="o">.</span><span class="n">run_simulation</span><span class="p">()</span>
+    <span class="n">md_server</span><span class="o">.</span><span class="n">save_simulation</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">startMetServer</span><span class="p">(</span><span class="n">configuration_file</span><span class="p">,</span> <span class="n">log_file</span><span class="p">,</span> <span class="n">log_level</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">authkey</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; A function to create and start a SimulationPotential instance.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">met_server</span> <span class="o">=</span> <span class="n">SimulationPotential</span><span class="p">(</span><span class="n">configuration_file</span><span class="p">,</span> <span class="n">log_file</span><span class="p">,</span> <span class="n">log_level</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">authkey</span><span class="p">)</span>
+    <span class="n">met_server</span><span class="o">.</span><span class="n">run_potential_server</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">startMdClient</span><span class="p">(</span><span class="n">client_id</span><span class="p">,</span> <span class="n">server_host</span><span class="p">,</span> <span class="n">server_port</span><span class="p">,</span> <span class="n">authkey</span><span class="p">,</span> <span class="n">metric_server_addresses</span><span class="p">,</span> <span class="n">configuration_file</span><span class="p">,</span> <span class="n">logfile</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; A function to create and start a SimulationServer instance.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">md_client</span> <span class="o">=</span> <span class="n">SimulationClient</span><span class="p">(</span><span class="n">client_id</span><span class="p">,</span> <span class="n">server_host</span><span class="p">,</span> <span class="n">server_port</span><span class="p">,</span> <span class="n">authkey</span><span class="p">,</span> <span class="n">metric_server_addresses</span><span class="p">,</span>
+                                 <span class="n">configuration_file</span><span class="p">,</span> <span class="n">logfile</span><span class="p">)</span>
+    <span class="n">md_client</span><span class="o">.</span><span class="n">start_client</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="c"># Configure distributed system for head machine</span>
+    <span class="n">NUMBER_OF_METRIC_SERVERS_PER_CLIENT</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">NUMBER_OF_CLIENTS</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">IP_ADDRESS</span> <span class="o">=</span> <span class="s">&#39;localhost&#39;</span>
+    <span class="n">SERVER_PORT</span> <span class="o">=</span> <span class="mi">5000</span>
+    <span class="n">BASE_PORT</span> <span class="o">=</span> <span class="mi">5000</span>  <span class="c"># Typically same value as server port</span>
+    <span class="n">AUTHKEY</span> <span class="o">=</span> <span class="s">&#39;password&#39;</span>
+
+    <span class="c"># Location of the configuration file</span>
+    <span class="n">CONFIG_FILE</span> <span class="o">=</span> <span class="s">&#39;Experiment/Example.bkhf&#39;</span>
+
+    <span class="c"># Location and name of the output file without a suffix (will be added in runtime)</span>
+    <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s">&#39;Experiment/Trajectory&#39;</span>
+
+    <span class="c"># Create a local process running a SimulationServer instance</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">startMdServer</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">CONFIG_FILE</span><span class="p">,</span> <span class="n">OUTPUT</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">IP_ADDRESS</span><span class="p">,</span> <span class="n">BASE_PORT</span><span class="p">,</span>
+                                                            <span class="n">AUTHKEY</span><span class="p">,</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">))</span>
+    <span class="n">s</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">NUMBER_OF_CLIENTS</span><span class="p">):</span>
+        <span class="n">metric_server_addresses</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c"># For the current client create NUMBER_OF_METRIC_SERVERS_PER_CLIENT many SimulationPotential instances</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">NUMBER_OF_METRIC_SERVERS_PER_CLIENT</span><span class="p">):</span>
+            <span class="c"># Compute a new port number (to avoid local conflicts)</span>
+            <span class="n">BASE_PORT</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">metric_server_addresses</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">BASE_PORT</span><span class="p">))</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">startMetServer</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">CONFIG_FILE</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span>
+                                                                     <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">IP_ADDRESS</span><span class="p">,</span> <span class="n">BASE_PORT</span><span class="p">,</span> <span class="n">AUTHKEY</span><span class="p">,</span> <span class="p">))</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+        <span class="c"># Start a SimulationClient process in a separate thread.</span>
+        <span class="n">UNIQUE_CLIENT_ID</span> <span class="o">=</span> <span class="s">&#39;Client_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">startMdClient</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">UNIQUE_CLIENT_ID</span><span class="p">,</span> <span class="n">IP_ADDRESS</span><span class="p">,</span> <span class="n">SERVER_PORT</span><span class="p">,</span> <span class="n">AUTHKEY</span><span class="p">,</span>
+                                                                <span class="n">metric_server_addresses</span><span class="p">,</span> <span class="n">CONFIG_FILE</span><span class="p">,</span> <span class="bp">None</span><span class="p">))</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Components.html" class="btn btn-neutral float-right" title="Components" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Implementations.html" class="btn btn-neutral" title="Implementations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Daniel C. Sutton.
+    </p>
+  </div>
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
