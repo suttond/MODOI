@@ -17,35 +17,51 @@ def mass_norm(vector, mass_matrix):
     return math.sqrt(np.inner(vector, mass_matrix.dot(vector)))
 
 
-def orthonormal_tangent_basis(tangent, dim):
+def orthonormal_tangent_basis(tangent, dimension):
     """ This function computes the inner product of vector with mass_matrix times vector.
 
     Args:
       tangent (numpy.array): The tangent direction along the local geodesic.
-      dim (int): The dimension of the problem. Computed from the atomistic simulation environment.
+      dimension (int): The dimension of the problem. Computed from the atomistic simulation environment.
 
     Returns:
       numpy.array: An orthonomal matrix with the first column parallel to tangent.
 
     """
 
-    # Find the first non-zero entry of the tangent vector (exists as start and endpoints are different)
-    j = np.nonzero(tangent)[0][0]
-
     # Set the first column of our output matrix as tangent
     mx = tangent
 
+    # Find the first non-zero entry of the tangent vector (exists as start and endpoints are different)
+    j = np.nonzero(mx)[0][0]
+
     # For the remaining dim - 1 columns choose unit basis vectors of the form (0,...,0,1,0,...,0) with the nonzero entry
     # not in position j.
-    for i in xrange(dim):
+    for i in xrange(1, dimension):
         if j != i:
-            e = np.zeros(dim)
+            e = np.zeros(dimension)
             e[i] = 1
             mx = np.vstack((mx, e))
 
+    mx = mx.transpose()
+
     # With the resulting matrix, perform the Gram-Schmidt orthonormalisation procedure on the transpose of the matrix
     # and return it.
-    return orth(np.transpose(mx))
+    m, n = np.shape(mx)
+    Q = np.zeros([m, n])
+    R = np.zeros([n, n])
+    v = np.zeros(m)
+
+    for j in range(n):
+
+        v[:] = mx[:,j]
+        for i in range(j):
+            r = np.dot(Q[:,i], mx[:,j]); R[i,j] = r
+            v[:] = v[:] - r*Q[:,i]
+        r = np.linalg.norm(v); R[j,j]= r
+        Q[:,j] = v[:]/r
+
+    return Q
 
 
 def shifts_to_curve(start_point, end_point, shift_points, number_of_inner_points, basis_rotation_matrix,
