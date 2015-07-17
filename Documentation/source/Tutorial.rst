@@ -1,6 +1,7 @@
 Tutorial
 ========
 
+
 Butane Simulation
 -----------------
 In this tutorial we will use the MODOI package to compute the transition path for a butane molecule between it's trans
