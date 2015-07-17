@@ -42,10 +42,10 @@ if __name__ == '__main__':
     AUTHKEY = 'password'
 
     # Location of the configuration file
-    CONFIG_FILE = 'MODOI/Experiment/Example.bkhf'
+    CONFIG_FILE = 'Experiment/Example.bkhf'
 
     # Location and name of the output file without a suffix (will be added in runtime)
-    OUTPUT = 'MODOI/Experiment/Trajectory'
+    OUTPUT = 'Experiment/Trajectory'
 
     # Create a local process running a SimulationServer instance
     s = multiprocessing.Process(target=startMdServer, args=(CONFIG_FILE, OUTPUT, None, IP_ADDRESS, BASE_PORT,

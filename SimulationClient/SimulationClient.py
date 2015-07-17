@@ -21,13 +21,22 @@ class SimulationClient:
     calls to it's assigned SimulationPotential servers.
 
     Attributes:
-      CONFIGURATION (dict): A dictionary containing the parsed values from the file in configuration_file.
-      CURVE_ADDRESS (str, int): A tuple containing a string representing the hostname/IP and an integer for the running SimulationServer.
-      AUTHKEY (str): A string containing the authorisation key for the listener method.
-      DELAY (float): The length of time the SimulationClient should wait if there is no new available jobs, before attempting to contact the SimulationServer again.
-      METRIC_SERVERS: A list containing tuples of addresses for SimulationPotential instances.
-      ID (str): A string that uniquely identifies the client amongst all other clients in the computation.
-      MASS_MATRIX (numpy.array): A NumPy matrix containing the mass matrix of the molecular system. Produced automatically from the Atomistic Simulation Environment.
+      CONFIGURATION (dict) :
+          A dictionary containing the parsed values from the file in configuration_file.
+      CURVE_ADDRESS (str, int) :
+          A tuple containing a string representing the hostname/IP and an integer for the running SimulationServer.
+      AUTHKEY (str) :
+          A string containing the authorisation key for the listener method.
+      DELAY (float) :
+          The length of time the SimulationClient should wait if there is no new available jobs, before attempting to
+          contact the SimulationServer again.
+      METRIC_SERVERS :
+          A list containing tuples of addresses for SimulationPotential instances.
+      ID (str) :
+          A string that uniquely identifies the client amongst all other clients in the computation.
+      MASS_MATRIX (numpy.array) :
+          A NumPy matrix containing the mass matrix of the molecular system. Produced automatically from the Atomistic
+          Simulation Environment.
 
     """
     def __init__(self, simulation_client_id, server_host, server_port, authkey, metric_server_addresses,
@@ -35,18 +44,31 @@ class SimulationClient:
         """The constructor for the SimulationClient class.
 
         Note:
-          This class is intended to be used in conjunction with running SimulationServer and SimulationPotential objects. It will cause a runtime exception if this condition isn't satisfied.
+          This class is intended to be used in conjunction with running SimulationServer and SimulationPotential
+          objects. It will cause a runtime exception if this condition isn't satisfied.
 
         Args:
-          simulation_client_id (str): A string that uniquely identifies the client amongst all other clients in the computation.
-          server_host (str): The TCP/IP hostname of the running SimulationServer instance.
-          server_port (int): The port number that the SimulationServer instance is communicating on.
-          authkey (str, optional): Authentication key used to secure process communications. Default to None for local computations to increase speed.
-          metric_server_addresses: A list containing tuples of the type (str, int) containing the hostnames and ports for the running SimulationPotential instances.
-          configuration_file (str): Directory and filename of the configuration file.
-          logfile (str, optional): Directory and filename of the log file. Is created if doesn't exist, overwritten if it does.
-          log_level (int, optional): Specify level of logging required as described in the logging package documentation.
-          callback_delay (float): The length of time the SimulationClient should wait if there is no new available jobs, before attempting to contact the SimulationServer again.
+          simulation_client_id (str) :
+              A string that uniquely identifies the client amongst all other clients in the computation.
+          server_host (str) :
+              The TCP/IP hostname of the running SimulationServer instance.
+          server_port (int) :
+              The port number that the SimulationServer instance is communicating on.
+          authkey (str, optional) :
+              Authentication key used to secure process communications. Default to None for local computations to
+              increase speed.
+          metric_server_addresses :
+              A list containing tuples of the type (str, int) containing the hostnames and ports for the running
+              SimulationPotential instances.
+          configuration_file (str) :
+              Directory and filename of the configuration file.
+          logfile (str, optional) :
+              Directory and filename of the log file. Is created if doesn't exist, overwritten if it does.
+          log_level (int, optional) :
+              Specify level of logging required as described in the logging package documentation.
+          callback_delay (float) :
+              The length of time the SimulationClient should wait if there is no new available jobs, before attempting
+               to contact the SimulationServer again.
 
         """
         # Set the SimulationClient log output to write to logfile at prescribed log level if specified. Otherwise write
@@ -66,7 +88,8 @@ class SimulationClient:
         # Set the callback delay as described in the attributes.
         self.DELAY = callback_delay
 
-        # Store the ADDRESS and AUTHKEY attributes for Client objects in the start_client method used to compute the metric values.
+        # Store the ADDRESS and AUTHKEY attributes for Client objects in the start_client method used to compute the
+        # metric values.
         self.METRIC_SERVERS = metric_server_addresses
 
         # Set the client's unique identifier.
@@ -181,8 +204,8 @@ class SimulationClient:
                 # When a connection is made send the client message.
                 server.send(client_response)
 
-                # The client assumes the server will respond with a message, either a local geodesic to compute or a message
-                # asking the client to try again after DELAY seconds.
+                # The client assumes the server will respond with a message, either a local geodesic to compute or a
+                # message asking the client to try again after DELAY seconds.
                 server_response = server.recv()
 
                 # Interpret the servers response by first extracting the status_code variable from the response.
@@ -197,8 +220,8 @@ class SimulationClient:
                 # Write an error to the log for this client indicating that the connection couldn't be made.
                 logging.warning('Failed to Make Connection to SimulationServer. Shutting down client.')
 
-                # Send a signal to the running instances of SimulationPotential that the SimulationClient would have used
-                # indicating that they should also shutdown.
+                # Send a signal to the running instances of SimulationPotential that the SimulationClient would have
+                # used indicating that they should also shutdown.
                 shutdown_metric(self.METRIC_SERVERS, self.AUTHKEY)
 
                 # Exit the main loop of the SimulationClient.

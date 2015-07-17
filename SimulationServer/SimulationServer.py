@@ -12,18 +12,25 @@ from SimulationUtilities.Visualize import write_xyz_animation
 class SimulationServer:
     """
 
-    The purpose of this object is to manage the positions of the global nodes as described in Procedure 4.16 in
-    [Sutton2013]_. The object determines the next node to be sent using the next() method of the Curve class. The node
-    is then sent using TCP via the Listener object provided by the multiprocessing package. When the curve movement
-    drops below a tolerance specified in the configuration file the server will stop.
+    The purpose of this object is to manage the positions of the global nodes. The object determines the next node
+    to be sent using the next() method of the Curve class. The node is then sent using TCP via the Listener object
+    provided by the multiprocessing package. When the curve movement drops below a tolerance specified in the
+    configuration file the server will stop.
 
     Attributes:
-      CONFIGURATION (dict): A dictionary containing the parsed values from the file in configuration_file.
-      ADDRESS (str, int): A tuple containing a string representing the hostname/IP and an integer for the service port.
-      AUTHKEY (str): A string containing the authorisation key for the listener method.
-      OUTPUT_FILENAME (str): The directory and filename for the output. Note that this should not have a suffix as this is provided at runtime.
-      CURVE (Curve): A curve object that contains the result of the curve shortening procedure.
-      FINISHED (bool): To indicate whether run_simulation has completed.
+      CONFIGURATION (dict) :
+          A dictionary containing the parsed values from the file in configuration_file.
+      ADDRESS (str, int) :
+          A tuple containing a string representing the hostname/IP and an integer for the service port.
+      AUTHKEY (str) :
+          A string containing the authorisation key for the listener method.
+      OUTPUT_FILENAME (str) :
+          The directory and filename for the output. Note that this should not have a suffix as this is provided at
+          runtime.
+      CURVE (Curve) :
+          A curve object that contains the result of the curve shortening procedure.
+      FINISHED (bool) :
+          To indicate whether run_simulation has completed.
 
     """
     def __init__(self, configuration_file, output_filename, logfile=None,
@@ -31,16 +38,26 @@ class SimulationServer:
         """The constructor for the SimulationServer class.
 
         Note:
-          This class is intended to be used in conjunction with running SimulationClient and SimulationPotential objects. See the run_simulation method for more details.
+          This class is intended to be used in conjunction with running SimulationClient and SimulationPotential
+          objects. See the run_simulation method for more details.
 
         Args:
-          configuration_file (str): Directory and filename of the configuration file.
-          output_filename (str): Directory and filename of the output files. A suffix is added at runtime and is not required.
-          logfile (str, optional): Directory and filename of the log file. Is created if doesn't exist, overwritten if it does.
-          hostname (str, optional): Hostname/IP which the SimulationServer will run on. Default value is 'localhost' to run simulations locally.
-          port (int, optional): Port number which the SimulationServer will run on. Default value is 5000, just because.
-          authkey (str, optional): Authentication key used to secure process communications. Default to None for local computations to increase speed.
-          log_level (int, optional): Specify level of logging required as described in the logging package documentation.
+          configuration_file (str) :
+              Directory and filename of the configuration file.
+          output_filename (str) :
+              Directory and filename of the output files. A suffix is added at runtime and is not required.
+          logfile (str, optional) :
+              Directory and filename of the log file. Is created if doesn't exist, overwritten if it does.
+          hostname (str, optional) :
+              Hostname/IP which the SimulationServer will run on. Default value is 'localhost' to run simulations
+              locally.
+          port (int, optional) :
+              Port number which the SimulationServer will run on. Default value is 5000, just because.
+          authkey (str, optional) :
+              Authentication key used to secure process communications. Default to None for local computations to
+              increase speed.
+          log_level (int, optional) :
+              Specify level of logging required as described in the logging package documentation.
         """
 
         # Set the SimulationServer log output to write to logfile at prescribed log level if specified. Otherwise write
@@ -83,7 +100,8 @@ class SimulationServer:
         """Start the SimulationServer listener and start the Birkhoff curve shortening procedure.
 
         Note:
-          This class assumes that after starting there will be at least one running instance of SimulationClient pointing to ADDRESS, otherwise this process will remain indefinitely blocked.
+          This class assumes that after starting there will be at least one running instance of SimulationClient
+          pointing to ADDRESS, otherwise this process will remain indefinitely blocked.
         """
 
         # Set up the listener for communication at ADDRESS. Backlog is set to 5 to allow maximum concurrent connections.

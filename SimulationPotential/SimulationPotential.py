@@ -17,9 +17,12 @@ class SimulationPotential:
     received then the server shuts down.
 
     Attributes:
-      CONFIGURATION (dict): A dictionary containing the parsed values from the file in configuration_file.
-      ADDRESS (str, int): A tuple containing a string representing the hostname/IP and an integer for the service port.
-      AUTHKEY (str): A string containing the authorisation key for the listener method.
+      CONFIGURATION (dict) :
+          A dictionary containing the parsed values from the file in configuration_file.
+      ADDRESS (str, int) :
+          A tuple containing a string representing the hostname/IP and an integer for the service port.
+      AUTHKEY (str) :
+          A string containing the authorisation key for the listener method.
 
 
     """
@@ -28,20 +31,29 @@ class SimulationPotential:
         """The constructor for the SimulationPotential class.
 
         Note:
-          This class is intended to be used in conjunction with running SimulationServer and SimulationClient objects. See the run_potential_server method for more details.
+          This class is intended to be used in conjunction with running SimulationServer and SimulationClient objects.
+          See the run_potential_server method for more details.
 
         Args:
-          configuration_file (str): Directory and filename of the configuration file.
-          logfile (str, optional): Directory and filename of the log file. Is created if doesn't exist, overwritten if it does.
-          log_level (int, optional): Specify level of logging required as described in the logging package documentation.
-          hostname (str, optional): Hostname/IP which the SimulationPotential will run on. Default value is 'localhost' to run simulations locally.
-          port (int, optional): Port number which the SimulationPotential will run on. Default value is 5000, just because.
-          authkey (str, optional): Authentication key used to secure process communications. Default to None for local computations to increase speed.
+          configuration_file (str) :
+              Directory and filename of the configuration file.
+          logfile (str, optional) :
+              Directory and filename of the log file. Is created if doesn't exist, overwritten if it does.
+          log_level (int, optional) :
+              Specify level of logging required as described in the logging package documentation.
+          hostname (str, optional) :
+              Hostname/IP which the SimulationPotential will run on. Default value is 'localhost' to run simulations
+              locally.
+          port (int, optional) :
+              Port number which the SimulationPotential will run on. Default value is 5000, just because.
+          authkey (str, optional) :
+              Authentication key used to secure process communications. Default to None for local computations to
+              increase speed.
 
         """
 
-        # Set the SimulationPotential log output to write to logfile at prescribed log level if specified. Otherwise write
-        # to console output. Setting to DEBUG will cause poor performance and should only be used to debug.
+        # Set the SimulationPotential log output to write to logfile at prescribed log level if specified. Otherwise
+        # write to console output. Setting to DEBUG will cause poor performance and should only be used to debug.
         if logfile is not None:
             logging.basicConfig(filename=logfile, level=log_level, filemode='w')
         else:
@@ -58,10 +70,13 @@ class SimulationPotential:
         """Start the instance of SimulationPotential ready to receive requests for metric values.
 
         Note:
-          This class assumes that after starting there will be at least one running instance of SimulationClient pointing to ADDRESS, otherwise this process will remain indefinitely blocked.
+          This class assumes that after starting there will be at least one running instance of SimulationClient
+          pointing to ADDRESS, otherwise this process will remain indefinitely blocked.
 
         Args:
-          small_number (str): A small number used to represent the zero metric value. This is used instead of zero to prevent divide by zero errors when evaluating the gradient of the metric.
+          small_number (str) :
+              A small number used to represent the zero metric value. This is used instead of zero to prevent divide
+              by zero errors when evaluating the gradient of the metric.
 
         """
 
