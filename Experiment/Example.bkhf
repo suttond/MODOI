@@ -1,6 +1,6 @@
 st = Experiment/x0.xyz
 en = Experiment/xN.xyz
-ln = 11
+ln = 5
 gn = 10
-pa = 200
-to = 0.1
+pa = 100
+to = 0.000000000001

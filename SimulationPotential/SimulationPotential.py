@@ -119,7 +119,7 @@ class SimulationPotential:
                     molecule.set_positions(Configuration_Processing.convert_vector_to_atoms(point[0]))
                     values.append([[math.sqrt(max([self.CONFIGURATION['metric_parameters'][0] -
                                                    molecule.get_potential_energy(), small_number])),
-                                   -Configuration_Processing.convert_atoms_to_vector(molecule.get_forces())], point[1]])
+                                   Configuration_Processing.convert_atoms_to_vector(molecule.get_forces())], point[1]])
 
                 # Compile response ready for when client asks for it.
                 server_response = {'status_code': comm_code('SERVER_PROVIDES_VALUES'), 'values': values}

@@ -65,7 +65,7 @@ def find_geodesic_midpoint(start_point, end_point, number_of_inner_points, basis
         return None
 
     # Obtain the initial gradient of the length functional along the curve
-    gfk = GradLength(curve, metric, number_of_inner_points, mass_matrix)
+    gfk = GradLength(curve, metric, number_of_inner_points, mass_matrix, basis_rotation_matrix)
 
     # Create an identity matrix object
     I = np.eye(number_of_variables, dtype=int)
@@ -111,7 +111,7 @@ def find_geodesic_midpoint(start_point, end_point, number_of_inner_points, basis
                     return None
 
                 phi1 = Length(curve, metric, number_of_inner_points, mass_matrix)
-                gfkp1 = GradLength(curve, metric, number_of_inner_points, mass_matrix)
+                gfkp1 = GradLength(curve, metric, number_of_inner_points, mass_matrix, basis_rotation_matrix)
                 derphi1 = np.dot(gfkp1, pk)
             else:
                 break
